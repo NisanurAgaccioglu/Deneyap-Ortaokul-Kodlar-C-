@@ -1,0 +1,52 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+class Araba
+{
+public:
+        string renk;
+        string marka;
+        float fiyat;
+
+        void etiketBastir();
+
+protected:
+    string enerjiTuru = "Elektrikli";
+};
+
+void Araba::etiketBastir()
+{
+    cout<<renk<<"-"<<marka<<"-"<<fiyat<<"-"<<"\n";
+}
+
+class ElektrikliAraba: public Araba
+{
+public:
+    int sure = 100;
+
+    void sarjSuresi()
+    {
+        cout<<enerjiTuru<<"-"<<sure;
+    }
+};
+
+int main ()
+{
+    Araba Arac1;
+    Arac1.renk = "Mavi";
+    Arac1.marka = "BMW";
+    Arac1.fiyat = 1000;
+
+    Arac1.etiketBastir();
+
+    ElektrikliAraba Arac2;
+    Arac2.marka = "TOGG";
+    Arac2.renk = "Beyaz";
+    Arac2.fiyat = 1500;
+
+    Arac2.etiketBastir();
+    Arac2.sarjSuresi();
+
+    return 0;
+}
