@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+class Ogrenci
+{
+public:
+    Ogrenci();
+
+    void etiketBastir();
+
+    ~Ogrenci();
+
+};
+
+
+Ogrenci::Ogrenci()
+{
+    cout<<"Ogrenci nesnesi olusturuldu."<<endl;  // \n
+}
+
+void Ogrenci::etiketBastir()
+{
+    cout<<"Etiket bastirildi."<<endl;
+}
+
+Ogrenci::~Ogrenci()
+{
+    cout<<"Ogrenci nesnesi kapatildi."<<endl;
+}
+
+
+int main()
+{
+    Ogrenci ali_ogrenci;
+
+    ali_ogrenci.etiketBastir();
+
+    return 0;
+}
