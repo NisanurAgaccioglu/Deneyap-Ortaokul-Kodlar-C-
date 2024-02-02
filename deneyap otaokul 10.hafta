@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+
+class Ceptelefonu
+{
+public:
+    string marka,model;
+    int fiyat;
+    bool arama_durum,mesaj_durum;
+
+    Ceptelefonu(int fiyat);
+    void arama();
+    void mesaj();
+};
+
+
+Ceptelefonu::Ceptelefonu(int fiyat)
+{
+    this->fiyat = fiyat;
+}
+
+void Ceptelefonu::arama()
+{
+    cout<<"Mesaj durumu: "<<mesaj_durum<<endl;
+}
+
+void Ceptelefonu::mesaj()
+{
+    cout<<"Arama durumu: "<<arama_durum<<endl;
+}
+
+int main()
+{
+    Ceptelefonu telefon1(7000);
+    Ceptelefonu telefon2(4500);
+
+    cout<<telefon1.fiyat<<endl;
+    cout<<telefon2.fiyat<<endl;
+
+    return 0;
+}
