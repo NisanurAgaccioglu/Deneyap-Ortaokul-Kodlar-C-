@@ -1,0 +1,51 @@
+/*
+//      DOSYAYA YAZMA
+*/
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    ofstream dosya;
+    dosya.open("ornek.txt");
+    dosya<<"BURAK, MUHAMMET, FAT�H, �EYMA, ENES, ��KR�"<<endl;
+    dosya.close();
+
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+/*
+//      DOSYAYI OKUMA
+*/
+
+#include <iostream>
+#include <fstream>
+
+int main() {
+    // Dosya ad�
+    const char* dosyaAdi = "ornek.txt";
+
+    // Dosya okuma nesnesi olu�tur
+    std::ifstream dosyaOku(dosyaAdi);
+
+    // Dosya kontrol�
+    if (!dosyaOku) {
+        std::cerr << "Dosya acilamadi: " << dosyaAdi << std::endl;
+        return 1; // Hata durumunu i�aret et
+    }
+
+    // Dosyadan veriyi okuma
+    std::string satir;
+    while (std::getline(dosyaOku, satir)) {
+        std::cout << satir << std::endl;
+    }
+
+    // Dosyay� kapat
+    dosyaOku.close();
+
+    return 0;
+}
