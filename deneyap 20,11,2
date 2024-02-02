@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main ( )
+{
+    int yas[5] = {15,14,17,12,16};
+
+    for(int i=0; i<5; i++){
+        cout << i+1 << ". arkadasimin yasi:"<<yas[i]<<endl;
+    }
+
+    return 0;
+}
