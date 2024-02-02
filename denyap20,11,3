@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+    int d1[4],d2[4],d3[4];
+    int i;
+
+    for(i=0;i<4;i++)
+    {
+        cout<<i+1<<".dizinin"<<i+1<<".eleman�n� giriniz:";
+        cin>>d1[i];
+    }
+
+        for(i=0;i<4;i++)
+    {
+        cout<<i+1<<".dizinin"<<i+1<<".eleman�n� giriniz:";
+        cin>>d2[i];
+    }
+
+        for(i=0;i<4;i++)
+    {
+        cout<<i+1<<".dizinin"<<i+1<<".eleman�n� giriniz:";
+        cin>>d3[i];
+    }
+
+    return 0;
+}
