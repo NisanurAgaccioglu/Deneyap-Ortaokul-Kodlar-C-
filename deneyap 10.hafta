@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+class Oda
+{
+public:
+
+    double uzunluk,genislik,yukseklik;
+
+    void veriAl(double uzunluk,double genislik, double yukseklik);
+    double alanHesapla();
+    double hacimHesapla();
+};
+
+void Oda::veriAl(double uzunluk,double genislik, double yukseklik)
+{
+    this->uzunluk = uzunluk;
+    this->genislik = genislik;
+    this->yukseklik = yukseklik;
+}
+
+double Oda::alanHesapla()
+{
+    return this->uzunluk * this->yukseklik;
+}
+
+double Oda::hacimHesapla()
+{
+    return this->uzunluk * this->yukseklik * this->genislik;
+}
+
+int main()
+{
+    Oda oda1;
+    oda1.veriAl(2.2,3.5,5.0);
+
+    cout<<"Odanin Alani = "<<oda1.alanHesapla()<<", Odanin Hacmi = "<<oda1.hacimHesapla()<<endl;
+
+    return 0;
+}
