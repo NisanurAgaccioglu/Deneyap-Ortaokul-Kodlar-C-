@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+
+float ortalama;
+
+cout<<"Ortalamanizi Giriniz : ";
+cin>>ortalama;
+
+if(ortalama >= 50){
+    if(ortalama >=85){
+        cout<<"Takdir Belgesi";
+    }
+    else{
+        if(ortalama >= 70){
+            cout<<"Tesekkur Belgesi";
+        }else{
+        cout<<"Belge Yok";
+        }
+    }
+}else{
+cout<<"Kaldi";
+}
+
+return 0;
+}
