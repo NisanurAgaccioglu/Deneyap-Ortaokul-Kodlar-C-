@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Ogrenci
+{
+private:
+    string ogrenciNumarasi;
+    string ad;
+    string soyad;
+
+public:
+    void deger_ata(string ogrenciNumarasi, string ad, string soyad);
+    void goster();
+};
+
+void Ogrenci::deger_ata(string ogrenciNumarasi,string ad,string soyad)
+{
+    this->ogrenciNumarasi = ogrenciNumarasi;
+    this->ad = ad;
+    this->soyad = soyad;
+}
+
+void Ogrenci::goster()
+{
+    cout<<"Ogrenci numarasi: "<<ogrenciNumarasi<<", "<<"Ad: "<<ad<<", "<<"Soyad: "<<soyad<<endl;
+}
+
+
+int main()
+{
+    Ogrenci ogrenci_1;
+    Ogrenci ogrenci_2;
+
+    ogrenci_1.deger_ata("671","Burak","Demir");
+    ogrenci_1.goster();
+
+    return 0;
+}
